@@ -1,0 +1,5 @@
+env/
+*.pyc
+*.sqlite
+*.swp
+_pycache_/
