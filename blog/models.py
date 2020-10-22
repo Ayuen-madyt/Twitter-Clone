@@ -19,6 +19,9 @@ class Post(models.Model):
     def number_of_comments(self):
         return Comment.objects.filter(post_connected=self).count()
 
+class Image (models.Model):
+    blog = models.ForeignKey(Post, on_delete = models.CASCADE)
+    image = models.ImageField(upload_to='media/')
 
 class Comment(models.Model):
     content = models.TextField(max_length=150)
